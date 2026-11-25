@@ -71,7 +71,7 @@ const Pricing = () => {
       ctaUrl: "https://salescentri.com/contact/sales-inquiry",
       variant: "outline"
     }
-  ];
+  ] as const;
 
   const features = [
     {
@@ -178,7 +178,7 @@ const Pricing = () => {
                   </ul>
                   
                   <Button 
-                    variant={plan.variant as any} 
+                    variant={plan.variant}
                     className="w-full"
                     size="lg"
                     onClick={() => handleExternalLink(plan.ctaUrl)}
